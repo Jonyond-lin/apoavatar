@@ -1,4 +1,4 @@
-/* ApoAvatar project page — v2 */
+/* ApoAvatar project page — v3 */
 :root {
   --paper: #f4efe6;
   --paper-deep: #e9e0d1;
@@ -407,7 +407,7 @@ select {
 }
 
 .reel {
-  padding: 74px 0 132px;
+  padding: 74px 0 64px;
 }
 
 .section-heading {
@@ -428,7 +428,7 @@ select {
   max-width: 900px;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(42px, 5.2vw, 70px);
+  font-size: clamp(38px, 4.5vw, 60px);
   font-weight: 500;
   letter-spacing: -0.052em;
   line-height: 0.98;
@@ -584,6 +584,10 @@ select {
   padding: 130px 0;
 }
 
+#demos.demo-section {
+  padding-top: 64px;
+}
+
 .video-grid {
   display: grid;
   gap: 30px;
@@ -651,7 +655,7 @@ select {
 }
 
 .comparison-grid {
-  gap: 42px 30px;
+  gap: 36px 24px;
 }
 
 .long-demo {
@@ -936,7 +940,7 @@ select {
 .takeaway h2 {
   max-width: 930px;
   margin-inline: auto;
-  font-size: clamp(52px, 8vw, 108px);
+  font-size: clamp(42px, 6vw, 78px);
 }
 
 .takeaway a {
@@ -1027,6 +1031,10 @@ select {
     max-width: 650px;
   }
 
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+
   .ablation-copy,
   .abstract-label {
     position: static;
@@ -1113,7 +1121,7 @@ select {
   }
 
   .section-heading h2 {
-    font-size: 42px;
+    font-size: 38px;
   }
 
   .section-heading > p:last-child,
@@ -1151,6 +1159,10 @@ select {
 
   .comparison-grid {
     gap: 34px;
+  }
+
+  #demos.demo-section {
+    padding-top: 52px;
   }
 
   .long-demo summary {
@@ -1212,7 +1224,7 @@ select {
   }
 
   .takeaway h2 {
-    font-size: 58px;
+    font-size: 46px;
   }
 }
 
