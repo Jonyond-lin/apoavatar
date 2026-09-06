@@ -42,7 +42,6 @@
         <div class="hero-copy" data-reveal>
           <div class="eyebrow"><span class="eyebrow-dot"></span> Research project · 2026</div>
           <h1>Apo<span>Avatar</span></h1>
-          <p class="hero-kicker">When speech moves, the avatar moves with it.</p>
           <p class="paper-title">
             Expressive Audio-Driven Avatar Generation via Refocused Audio-Pose Priors
           </p>
@@ -185,39 +184,35 @@
             </p>
           </div>
 
-          <div class="comparison-stack">
-            <article class="wide-demo" data-reveal>
-              <div class="video-frame video-frame--wide">
+          <div class="video-grid video-grid--two comparison-grid">
+            <article class="video-card" data-reveal>
+              <div class="video-frame video-frame--comparison">
                 <video controls muted loop playsinline preload="metadata" poster="assets/posters/formal_demo.jpg" data-autoplay>
                   <source src="assets/videos/formal_demo.mp4" type="video/mp4" />
                 </video>
                 <span class="video-badge">MultiTalk · OmniHuman · ApoAvatar</span>
               </div>
-              <div class="wide-demo-copy">
-                <span>Expressiveness</span>
+              <div class="video-caption">
                 <h3>Gestures follow the emphasis of speech.</h3>
                 <p>Our result remains natural and articulated while competing methods exhibit blurry hands or implausible poses.</p>
               </div>
             </article>
 
-            <article class="wide-demo wide-demo--reverse" data-reveal>
-              <div class="video-frame video-frame--wide">
+            <article class="video-card" data-reveal>
+              <div class="video-frame video-frame--comparison">
                 <video controls muted loop playsinline preload="metadata" poster="assets/posters/Fig4_demo.jpg" data-autoplay>
                   <source src="assets/videos/Fig4_demo.mp4" type="video/mp4" />
                 </video>
                 <span class="video-badge">Four-way comparison</span>
               </div>
-              <div class="wide-demo-copy">
-                <span>Hand quality</span>
+              <div class="video-caption">
                 <h3>Expressive motion stays visually coherent.</h3>
                 <p>ApoAvatar avoids the static or blurry gesture patterns visible in the compared generations.</p>
               </div>
             </article>
-          </div>
 
-          <div class="video-grid video-grid--two comparison-grid">
             <article class="video-card" data-reveal>
-              <div class="video-frame video-frame--cinema">
+              <div class="video-frame video-frame--comparison">
                 <video controls muted loop playsinline preload="metadata" poster="assets/posters/More_Comparison1.jpg">
                   <source src="assets/videos/More_Comparison1.mp4" type="video/mp4" />
                 </video>
@@ -229,7 +224,7 @@
             </article>
 
             <article class="video-card" data-reveal>
-              <div class="video-frame video-frame--cinema">
+              <div class="video-frame video-frame--comparison">
                 <video controls muted loop playsinline preload="metadata" poster="assets/posters/More_Comparison2.jpg">
                   <source src="assets/videos/More_Comparison2.mp4" type="video/mp4" />
                 </video>
@@ -240,6 +235,18 @@
               </div>
             </article>
           </div>
+
+          <details class="long-demo" data-reveal>
+            <summary>
+              <span>Watch the extended comparison</span>
+              <small>58 seconds · click to expand</small>
+            </summary>
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="none" poster="assets/posters/comparison.jpg">
+                <source data-src="assets/videos/comparison.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </details>
 
         </div>
       </section>
@@ -366,17 +373,6 @@
             </article>
           </div>
 
-          <details class="long-demo" data-reveal>
-            <summary>
-              <span>Watch the extended comparison</span>
-              <small>58 seconds · click to expand</small>
-            </summary>
-            <div class="video-frame video-frame--wide">
-              <video controls playsinline preload="none" poster="assets/posters/comparison.jpg">
-                <source data-src="assets/videos/comparison.mp4" type="video/mp4" />
-              </video>
-            </div>
-          </details>
         </div>
       </section>
 
@@ -388,8 +384,7 @@
           </div>
           <div class="abstract-copy" data-reveal>
             <p class="abstract-lead">
-              Audio-driven human video generation has greatly improved lip synchronization—but
-              speech rhythm and body motion are still weakly connected.
+              Lip sync has improved. Speech-driven body motion still lags behind.
             </p>
             <p>
               We present <strong>ApoAvatar</strong>, a diffusion-based framework that ties speaking

@@ -267,17 +267,9 @@ select {
   font-style: italic;
 }
 
-.hero-kicker {
-  margin: 42px 0 8px;
-  font-family: var(--font-display);
-  font-size: clamp(25px, 3.2vw, 44px);
-  font-style: italic;
-  line-height: 1.1;
-}
-
 .paper-title {
   max-width: 720px;
-  margin: 0 auto;
+  margin: 42px auto 0;
   color: var(--muted);
   font-size: clamp(15px, 1.6vw, 19px);
   line-height: 1.5;
@@ -435,7 +427,7 @@ select {
   max-width: 900px;
   margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(45px, 6.2vw, 82px);
+  font-size: clamp(42px, 5.2vw, 70px);
   font-weight: 500;
   letter-spacing: -0.052em;
   line-height: 0.98;
@@ -516,6 +508,10 @@ select {
   aspect-ratio: 16 / 9;
 }
 
+.video-frame--comparison {
+  aspect-ratio: 4 / 3;
+}
+
 .video-frame--portrait-pair {
   aspect-ratio: 1 / 1.05;
 }
@@ -568,9 +564,10 @@ select {
 
 .feature-video figcaption {
   display: flex;
-  justify-content: space-between;
+  gap: 16px;
+  justify-content: flex-start;
   padding: 15px 5px 0;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .feature-video figcaption span {
@@ -608,7 +605,6 @@ select {
 }
 
 .video-caption h3,
-.wide-demo-copy h3,
 .method-card h3,
 .ablation-copy h3 {
   margin: 0 0 8px;
@@ -619,8 +615,7 @@ select {
   line-height: 1.1;
 }
 
-.video-caption p,
-.wide-demo-copy p {
+.video-caption p {
   margin: 0;
   color: var(--muted);
   font-size: 14px;
@@ -650,51 +645,12 @@ select {
   color: rgba(251, 248, 242, 0.64);
 }
 
-.comparison-stack {
-  display: grid;
-  gap: 86px;
-}
-
-.wide-demo {
-  display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(240px, 0.45fr);
-  gap: 52px;
-  align-items: center;
-}
-
-.wide-demo--reverse .video-frame {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.wide-demo--reverse .wide-demo-copy {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.wide-demo-copy > span {
-  display: inline-block;
-  margin-bottom: 14px;
-  color: var(--accent-soft);
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.wide-demo-copy h3 {
-  font-size: clamp(30px, 3.6vw, 50px);
-}
-
-.wide-demo-copy p,
 .demo-section--ink .video-caption p {
   color: rgba(251, 248, 242, 0.58);
 }
 
 .comparison-grid {
-  margin-top: 88px;
-  padding-top: 42px;
-  border-top: 1px solid rgba(255, 255, 255, 0.13);
+  gap: 42px 30px;
 }
 
 .long-demo {
@@ -1059,8 +1015,6 @@ select {
   }
 
   .section-heading--split,
-  .wide-demo,
-  .wide-demo--reverse,
   .method-grid,
   .ablation-block,
   .abstract-layout {
@@ -1070,19 +1024,6 @@ select {
 
   .section-heading--split > p {
     max-width: 650px;
-  }
-
-  .wide-demo--reverse .video-frame,
-  .wide-demo--reverse .wide-demo-copy {
-    grid-column: 1;
-  }
-
-  .wide-demo--reverse .video-frame {
-    grid-row: 1;
-  }
-
-  .wide-demo--reverse .wide-demo-copy {
-    grid-row: 2;
   }
 
   .ablation-copy,
@@ -1134,10 +1075,6 @@ select {
     font-size: clamp(66px, 22vw, 102px);
   }
 
-  .hero-kicker {
-    margin-top: 34px;
-  }
-
   .author-names {
     gap: 7px 17px;
     font-size: 12px;
@@ -1175,7 +1112,7 @@ select {
   }
 
   .section-heading h2 {
-    font-size: 47px;
+    font-size: 42px;
   }
 
   .section-heading > p:last-child,
@@ -1211,16 +1148,8 @@ select {
     bottom: 9px;
   }
 
-  .wide-demo-copy h3 {
-    font-size: 34px;
-  }
-
-  .comparison-stack {
-    gap: 58px;
-  }
-
   .comparison-grid {
-    margin-top: 56px;
+    gap: 34px;
   }
 
   .long-demo summary {
