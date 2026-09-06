@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ApoAvatar generates expressive, rhythm-aligned avatar videos from a single image and speech audio."
+    />
+    <meta name="theme-color" content="#f4efe6" />
+    <meta property="og:title" content="ApoAvatar — Expressive Audio-Driven Avatar Generation" />
+    <meta
+      property="og:description"
+      content="Refocused audio-pose priors for expressive gestures, accurate lip sync, and stable identity."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/expressive-compare.webp" />
+    <title>ApoAvatar — Expressive Audio-Driven Avatar Generation</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <a class="wordmark" href="#top" aria-label="ApoAvatar home">
+        <span class="wordmark-mark" aria-hidden="true">A</span>
+        <span>ApoAvatar</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#demos">Demos</a>
+        <a href="#method">Method</a>
+        <a href="#abstract">Abstract</a>
+      </nav>
+      <a class="header-cta" href="#demos">Watch results <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy" data-reveal>
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Research project · 2026</div>
+          <h1>Apo<span>Avatar</span></h1>
+          <p class="hero-kicker">When speech moves, the avatar moves with it.</p>
+          <p class="paper-title">
+            Expressive Audio-Driven Avatar Generation via Refocused Audio-Pose Priors
+          </p>
+
+          <div class="authors" aria-label="Authors and affiliations">
+            <div class="author-names">
+              <span>Jingyu Lin<sup>1</sup></span><span>Chao Zhang<sup>2</sup></span>
+              <span>Donghao Zhou<sup>3</sup></span><span>Shilei Wen<sup>2</sup></span>
+              <span>Lan Du<sup>1</sup></span><span>Cunjian Chen<sup>1</sup></span>
+            </div>
+            <div class="affiliations">
+              <span><sup>1</sup>Monash University</span>
+              <span><sup>2</sup>ByteDance</span>
+              <span><sup>3</sup>The Chinese University of Hong Kong</span>
+            </div>
+          </div>
+
+          <div class="resource-row">
+            <a class="resource-link resource-link--primary" href="#demos">
+              <span class="resource-icon" aria-hidden="true">▶</span>
+              Explore demos
+            </a>
+            <span class="resource-link is-disabled" aria-disabled="true">
+              Paper <small>coming soon</small>
+            </span>
+            <span class="resource-link is-disabled" aria-disabled="true">
+              Code <small>coming soon</small>
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-wave" aria-hidden="true">
+          <svg viewBox="0 0 1200 180" role="presentation" preserveAspectRatio="none">
+            <path class="wave-fill" d="M0 120L24 112L48 132L72 100L96 106L120 70L144 91L168 44L192 84L216 68L240 124L264 108L288 86L312 118L336 40L360 72L384 26L408 88L432 104L456 64L480 124L504 108L528 76L552 96L576 42L600 80L624 114L648 106L672 56L696 72L720 126L744 116L768 84L792 102L816 52L840 90L864 122L888 112L912 68L936 92L960 130L984 106L1008 72L1032 92L1056 48L1080 84L1104 116L1128 98L1152 72L1176 110L1200 96V180H0Z" />
+            <path class="wave-line" d="M0 120L24 112L48 132L72 100L96 106L120 70L144 91L168 44L192 84L216 68L240 124L264 108L288 86L312 118L336 40L360 72L384 26L408 88L432 104L456 64L480 124L504 108L528 76L552 96L576 42L600 80L624 114L648 106L672 56L696 72L720 126L744 116L768 84L792 102L816 52L840 90L864 122L888 112L912 68L936 92L960 130L984 106L1008 72L1032 92L1056 48L1080 84L1104 116L1128 98L1152 72L1176 110L1200 96" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="reel section-shell" aria-labelledby="reel-title">
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="section-index">00 / Highlights</p>
+            <h2 id="reel-title">Speech you can <em>see</em>.</h2>
+          </div>
+          <p>
+            ApoAvatar couples prosody with full-body motion, producing gestures that rise and
+            settle with the speaker’s rhythm while preserving lip sync and identity.
+          </p>
+        </div>
+
+        <figure class="feature-video" data-reveal>
+          <div class="video-frame video-frame--feature">
+            <video
+              controls
+              muted
+              loop
+              autoplay
+              playsinline
+              preload="metadata"
+              poster="assets/posters/whole_sup_demo.jpg"
+              data-autoplay
+            >
+              <source src="assets/videos/whole_sup_demo.mp4" type="video/mp4" />
+              Your browser does not support the video element.
+            </video>
+            <button class="sound-toggle" type="button" data-sound-toggle aria-label="Turn sound on">
+              <span aria-hidden="true">Muted</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <span class="video-badge">Full showcase · 00:56</span>
+          </div>
+          <figcaption>
+            <span>One image + one voice</span>
+            <strong>Expressive, coherent avatar performance</strong>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="demo-section section-shell" id="demos" aria-labelledby="general-title">
+        <div class="section-heading" data-reveal>
+          <p class="section-index">01 / General results</p>
+          <h2 id="general-title">Natural motion across speakers and scenes.</h2>
+          <p class="section-lede">
+            From close-up speech to standing presentations, ApoAvatar maintains visual fidelity
+            while adapting gesture dynamics to the audio.
+          </p>
+        </div>
+
+        <div class="video-grid video-grid--three">
+          <article class="video-card" data-reveal>
+            <div class="video-frame video-frame--square">
+              <video controls muted loop playsinline preload="metadata" poster="assets/posters/walking.jpg" data-autoplay>
+                <source src="assets/videos/walking.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">Standing speaker</span>
+            </div>
+            <div class="video-caption">
+              <h3>Natural co-speech gestures</h3>
+              <p>Rhythm-aware upper-body motion without an explicit pose sequence.</p>
+            </div>
+          </article>
+
+          <article class="video-card" data-reveal>
+            <div class="video-frame video-frame--square">
+              <video controls muted loop playsinline preload="metadata" poster="assets/posters/moving.jpg" data-autoplay>
+                <source src="assets/videos/moving.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">Close-up</span>
+            </div>
+            <div class="video-caption">
+              <h3>Stable facial performance</h3>
+              <p>Clear articulation and coherent head motion under conversational speech.</p>
+            </div>
+          </article>
+
+          <article class="video-card" data-reveal>
+            <div class="video-frame video-frame--portrait">
+              <video controls muted loop playsinline preload="metadata" poster="assets/posters/no_ref_image.jpg" data-autoplay>
+                <source src="assets/videos/no_ref_image.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">Reference-free</span>
+            </div>
+            <div class="video-caption">
+              <h3>Text + audio generation</h3>
+              <p>A plausible speaker can be synthesized even when no reference image is provided.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo-section demo-section--ink" aria-labelledby="comparison-title">
+        <div class="section-shell">
+          <div class="section-heading section-heading--light" data-reveal>
+            <p class="section-index">02 / Comparisons</p>
+            <h2 id="comparison-title">More motion—without losing control.</h2>
+            <p class="section-lede">
+              Side-by-side results highlight expressive hand motion, clearer structure, and more
+              stable identity than representative baselines.
+            </p>
+          </div>
+
+          <div class="comparison-stack">
+            <article class="wide-demo" data-reveal>
+              <div class="video-frame video-frame--wide">
+                <video controls muted loop playsinline preload="metadata" poster="assets/posters/formal_demo.jpg" data-autoplay>
+                  <source src="assets/videos/formal_demo.mp4" type="video/mp4" />
+                </video>
+                <span class="video-badge">MultiTalk · OmniHuman · ApoAvatar</span>
+              </div>
+              <div class="wide-demo-copy">
+                <span>Expressiveness</span>
+                <h3>Gestures follow the emphasis of speech.</h3>
+                <p>Our result remains natural and articulated while competing methods exhibit blurry hands or implausible poses.</p>
+              </div>
+            </article>
+
+            <article class="wide-demo wide-demo--reverse" data-reveal>
+              <div class="video-frame video-frame--wide">
+                <video controls muted loop playsinline preload="metadata" poster="assets/posters/Fig4_demo.jpg" data-autoplay>
+                  <source src="assets/videos/Fig4_demo.mp4" type="video/mp4" />
+                </video>
+                <span class="video-badge">Four-way comparison</span>
+              </div>
+              <div class="wide-demo-copy">
+                <span>Hand quality</span>
+                <h3>Expressive motion stays visually coherent.</h3>
+                <p>ApoAvatar avoids the static or blurry gesture patterns visible in the compared generations.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="video-grid video-grid--two comparison-grid">
+            <article class="video-card" data-reveal>
+              <div class="video-frame video-frame--cinema">
+                <video controls muted loop playsinline preload="metadata" poster="assets/posters/More_Comparison1.jpg">
+                  <source src="assets/videos/More_Comparison1.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="video-caption">
+                <h3>Identity and motion comparison</h3>
+                <p>Same image and audio, compared across five representative systems.</p>
+              </div>
+            </article>
+
+            <article class="video-card" data-reveal>
+              <div class="video-frame video-frame--cinema">
+                <video controls muted loop playsinline preload="metadata" poster="assets/posters/More_Comparison2.jpg">
+                  <source src="assets/videos/More_Comparison2.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="video-caption">
+                <h3>Natural, expressive delivery</h3>
+                <p>Comparison on a different speaker, appearance, and speaking style.</p>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="demo-section section-shell" aria-labelledby="capability-title">
+        <div class="section-heading section-heading--split" data-reveal>
+          <div>
+            <p class="section-index">03 / Flexible inference</p>
+            <h2 id="capability-title">One model, multiple ways to perform.</h2>
+          </div>
+          <p>
+            Use ApoAvatar pose-free for audio-driven gestures, add an external pose for direct
+            control, or route separate voices in a multi-person dialogue.
+          </p>
+        </div>
+
+        <div class="video-grid video-grid--two">
+          <article class="video-card video-card--feature" data-reveal>
+            <div class="video-frame video-frame--cinema">
+              <video controls muted loop playsinline preload="metadata" poster="assets/posters/pose_free_res.jpg" data-autoplay>
+                <source src="assets/videos/pose_free_res.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">Pose-controlled / pose-free</span>
+            </div>
+            <div class="video-caption">
+              <h3>Optional pose control</h3>
+              <p>The same network supports direct pose conditioning and expressive pose-free inference.</p>
+            </div>
+          </article>
+
+          <article class="video-card video-card--feature" data-reveal>
+            <div class="video-frame video-frame--cinema">
+              <video controls muted loop playsinline preload="metadata" poster="assets/posters/Multiperson_trial.jpg" data-autoplay>
+                <source src="assets/videos/Multiperson_trial.mp4" type="video/mp4" />
+              </video>
+              <span class="video-badge">Multi-person extension</span>
+            </div>
+            <div class="video-caption">
+              <h3>Speaker-specific dialogue</h3>
+              <p>Per-person audio routing drives independent gestures in a shared scene.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="method section-shell" id="method" aria-labelledby="method-title">
+        <div class="section-heading" data-reveal>
+          <p class="section-index">04 / Method</p>
+          <h2 id="method-title">Learning the link between prosody and motion.</h2>
+          <p class="section-lede">
+            ApoAvatar is a diffusion-based framework with two complementary mechanisms for
+            learning expressive, temporally aligned avatar motion.
+          </p>
+        </div>
+
+        <figure class="pipeline" data-reveal>
+          <div class="pipeline-image">
+            <img
+              src="assets/images/pipeline.webp"
+              alt="ApoAvatar architecture showing image, pose, audio, and text inputs connected to the video diffusion model through pose refocusing and frame-wise cross-attention."
+              loading="lazy"
+            />
+          </div>
+          <figcaption>Overview of the ApoAvatar generation framework.</figcaption>
+        </figure>
+
+        <div class="method-grid">
+          <article class="method-card" data-reveal>
+            <div class="method-number">01</div>
+            <p class="method-tag">Training-time prior</p>
+            <h3>Audio-Pose Prior Refocusing</h3>
+            <p>
+              Speech energy controls how much pose supervision is retained at each frame. Strong
+              accents keep pose cues; quiet segments suppress them. The model therefore distills
+              an implicit rhythm-to-motion prior instead of depending on pose at inference.
+            </p>
+            <div class="mini-signal" aria-hidden="true">
+              <span style="--h: 20%"></span><span style="--h: 45%"></span><span style="--h: 76%"></span>
+              <span style="--h: 38%"></span><span style="--h: 92%"></span><span style="--h: 62%"></span>
+              <span style="--h: 28%"></span><span style="--h: 70%"></span><span style="--h: 44%"></span>
+            </div>
+          </article>
+
+          <article class="method-card method-card--dark" data-reveal>
+            <div class="method-number">02</div>
+            <p class="method-tag">Per-frame interaction</p>
+            <h3>Frame-Wise Audio-Video Interaction</h3>
+            <p>
+              An Audio DiT adapter refines audio with the current visual and pose-aware context.
+              The refined audio is then injected back into the matching video frame, strengthening
+              short-term alignment and motion coherence.
+            </p>
+            <div class="interaction-diagram" aria-hidden="true">
+              <span>Audio</span><i>→</i><span>Visual + pose</span><i>→</i><span>Frame <b>t</b></span>
+            </div>
+          </article>
+        </div>
+
+        <div class="ablation-block" data-reveal>
+          <div class="ablation-copy">
+            <p class="section-index">Ablations</p>
+            <h3>Each component adds visible motion quality.</h3>
+            <p>
+              Refocusing prevents pose supervision from overwhelming audio dynamics, while the
+              frame-wise interaction module improves expressive movement within local time windows.
+            </p>
+          </div>
+          <div class="ablation-videos">
+            <article>
+              <div class="video-frame video-frame--portrait-pair">
+                <video controls muted loop playsinline preload="metadata" poster="assets/posters/refocusing_ablation.jpg" data-autoplay>
+                  <source src="assets/videos/refocusing_ablation.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <h4>With / without refocusing</h4>
+            </article>
+            <article>
+              <div class="video-frame video-frame--portrait-pair">
+                <video controls muted loop playsinline preload="metadata" poster="assets/posters/frame-wise_ablation.jpg" data-autoplay>
+                  <source src="assets/videos/frame-wise_ablation.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <h4>With / without frame-wise interaction</h4>
+            </article>
+          </div>
+
+          <details class="long-demo" data-reveal>
+            <summary>
+              <span>Watch the extended comparison</span>
+              <small>58 seconds · click to expand</small>
+            </summary>
+            <div class="video-frame video-frame--wide">
+              <video controls playsinline preload="none" poster="assets/posters/comparison.jpg">
+                <source data-src="assets/videos/comparison.mp4" type="video/mp4" />
+              </video>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="abstract-section" id="abstract" aria-labelledby="abstract-title">
+        <div class="section-shell abstract-layout">
+          <div class="abstract-label" data-reveal>
+            <p class="section-index">05 / Paper</p>
+            <h2 id="abstract-title">Abstract</h2>
+          </div>
+          <div class="abstract-copy" data-reveal>
+            <p class="abstract-lead">
+              Audio-driven human video generation has greatly improved lip synchronization—but
+              speech rhythm and body motion are still weakly connected.
+            </p>
+            <p>
+              We present <strong>ApoAvatar</strong>, a diffusion-based framework that ties speaking
+              style to motion dynamics. Our Audio-Pose Prior Refocusing mechanism uses speech energy
+              to gate pose supervision during training: prosodically intense segments retain stronger
+              pose guidance, while quiet segments suppress it. This distills an implicit rhythm-to-motion
+              prior into the model, enabling expressive gestures at inference without explicit pose input.
+            </p>
+            <p>
+              We also introduce a frame-wise audio-video interaction module that updates audio features
+              using the current visual context and refocused pose prior through bidirectional cross-attention.
+              The framework supports both pose-controlled and pose-free inference. Experiments on EMTD and
+              HDTF show gains in lip-audio synchronization, gesture expressiveness, and overall motion naturalness.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="takeaway" aria-label="Main takeaway">
+        <div class="section-shell takeaway-inner" data-reveal>
+          <p>Audio is more than a lip signal.</p>
+          <h2>It is the pulse behind a performance.</h2>
+          <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <a class="wordmark wordmark--footer" href="#top">
+          <span class="wordmark-mark" aria-hidden="true">A</span>
+          <span>ApoAvatar</span>
+        </a>
+        <p>
+          Jingyu Lin<sup>1</sup> · Chao Zhang<sup>2</sup> · Donghao Zhou<sup>3</sup> ·
+          Shilei Wen<sup>2</sup> · Lan Du<sup>1</sup> · Cunjian Chen<sup>1</sup><br />
+          <span class="footer-affiliations">
+            <sup>1</sup>Monash University · <sup>2</sup>ByteDance ·
+            <sup>3</sup>The Chinese University of Hong Kong
+          </span>
+        </p>
+        <p class="footer-note">Research preview · All result clips are AI-generated unless otherwise noted.</p>
+      </div>
+    </footer>
+  </body>
+</html>
