@@ -1,4 +1,4 @@
-/* ApoAvatar project page — v3 */
+/* ApoAvatar project page — v4 */
 :root {
   --paper: #f4efe6;
   --paper-deep: #e9e0d1;
@@ -453,6 +453,24 @@ select {
 
 .section-lede {
   max-width: 670px;
+}
+
+@media (min-width: 1100px) {
+  .section-heading--method {
+    max-width: none;
+  }
+
+  .section-heading--method h2 {
+    max-width: none;
+    font-size: clamp(40px, 3.8vw, 52px);
+    white-space: nowrap;
+  }
+
+  .section-heading--method .section-lede {
+    max-width: none;
+    font-size: 16px;
+    white-space: nowrap;
+  }
 }
 
 .feature-video {
